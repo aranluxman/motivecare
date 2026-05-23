@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://motivecare.vercel.app/sitemap.xml
