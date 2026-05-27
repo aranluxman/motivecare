@@ -6,28 +6,30 @@
     <title>Motive Care | Auto Repair Shop in Markham, ON</title>
     <meta
       name="description"
-      content="Motive Care is a trusted Markham auto repair shop at 20 Heritage Rd. Call (905) 201-0087 for diagnostics, brakes, tires, oil changes, parts, and mechanical service."
+      content="Motive Care offers honest, reliable auto repair in Markham — brakes, tires, diagnostics, oil changes & more. Call (905) 201-0087 to book with a trusted local mechanic."
     />
     <meta
       name="keywords"
       content="Motive Care, Markham auto repair, mechanic Markham, car repair Markham, brake repair Markham, tire service Markham, auto parts Markham"
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#0f172a" />
+    <meta name="theme-color" content="#111111" />
     <link rel="canonical" href="https://motivecare.vercel.app/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta property="og:title" content="Motive Care | Auto Repair Shop in Markham, ON" />
     <meta
       property="og:description"
-      content="Reliable auto repair, diagnostics, brakes, tires, oil changes, and motor parts service in Markham."
+      content="Honest, reliable auto repair in Markham — brakes, tires, diagnostics, oil changes & more. Call (905) 201-0087."
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_CA" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1600&q=80" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?auto=format&fit=crop&w=1600&q=80" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="preconnect" href="https://www.google.com" />
     <link rel="stylesheet" href="/styles.css" />
@@ -36,7 +38,7 @@
         "@context": "https://schema.org",
         "@type": "AutoRepair",
         "name": "Motive Care",
-        "image": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1600&q=80",
+        "image": "https://images.unsplash.com/photo-1486754735734-325b5831c3ad?auto=format&fit=crop&w=1600&q=80",
         "telephone": "+1-905-201-0087",
         "priceRange": "$$",
         "address": {
@@ -58,6 +60,20 @@
           "ratingValue": "4.7",
           "reviewCount": "98"
         },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "15:00"
+          }
+        ],
         "paymentAccepted": "Cash, Credit Card, Debit Card, NFC Mobile Payments",
         "hasMap": "https://www.google.com/maps/place/Motive+Care/@43.8713035,-79.2822874,17z/",
         "sameAs": ["https://www.google.com/maps/place/Motive+Care/"],
@@ -76,62 +92,118 @@
 
     <header class="site-header" aria-label="Primary navigation">
       <a class="brand" href="/" aria-label="Motive Care home">
-        <span class="brand-mark">MC</span>
-        <span>Motive Care</span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+          </svg>
+        </span>
+        <span class="brand-name">Motive<span>Care</span></span>
       </a>
-      <nav class="nav-links" aria-label="Main menu">
+
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="primary-menu" aria-label="Main menu">
         <a href="#services">Services</a>
         <a href="#reviews">Reviews</a>
         <a href="#gallery">Photos</a>
         <a href="#location">Location</a>
+        <a class="nav-cta-book" href="#contact">Book Appointment</a>
+        <a class="nav-cta-call" href="tel:+19052010087" title="Call (905) 201-0087">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          <span>Call <span class="nav-call-num">(905) 201-0087</span></span>
+        </a>
       </nav>
-      <a class="header-call" href="tel:+19052010087">Call (905) 201-0087</a>
     </header>
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="rating-line">4.7 stars from 98 public reviews in Markham</p>
+        <div class="hero-inner">
+          <span class="badge-pill" aria-label="Rated 4.7 stars from 98 reviews">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            4.7 stars · 98 Markham reviews
+          </span>
           <h1 id="hero-title">Auto repair in Markham, handled with care.</h1>
           <p class="hero-text">
-            Motive Care helps drivers with diagnostics, brakes, tires, oil changes, electrical issues, motor parts, and dependable mechanical service from 20 Heritage Rd.
+            Honest, reliable auto repair in Markham. Motive Care has helped hundreds of
+            local drivers get back on the road — fair pricing, straight answers, and no runaround.
           </p>
           <div class="hero-actions" aria-label="Main calls to action">
-            <a class="button primary" href="tel:+19052010087">Book by phone</a>
+            <a class="button primary" href="tel:+19052010087">Call to Book</a>
             <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Motive+Care+20+Heritage+Rd+Markham+ON" rel="noopener">Get directions</a>
           </div>
-          <dl class="hero-facts" aria-label="Shop highlights">
-            <div>
-              <dt>Located</dt>
-              <dd>20 Heritage Rd, Markham</dd>
-            </div>
-            <div>
-              <dt>Planning</dt>
-              <dd>Appointments recommended</dd>
-            </div>
-            <div>
-              <dt>Payments</dt>
-              <dd>Credit, debit, tap accepted</dd>
-            </div>
-          </dl>
-        </div>
-        <div class="hero-media" aria-label="Auto repair workshop photo">
-          <img
-            src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1400&q=85"
-            alt="Mechanic working inside an auto repair shop"
-          />
-          <div class="floating-card">
-            <strong>Reliable mechanic service</strong>
-            <span>Diagnostics, repair, parts, and maintenance</span>
+          <div class="hero-trust" aria-label="Trust highlights">
+            <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.7 Stars</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <span>98 Reviews</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <span class="open-now">Open Today</span>
           </div>
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Service highlights">
-        <span>Onsite services</span>
-        <span>Mechanic on site</span>
-        <span>Customer washroom</span>
-        <span>NFC mobile payments</span>
+      <section class="info-row" aria-label="Shop information">
+        <div class="info-card">
+          <span class="info-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div>
+            <strong>Located</strong>
+            <span>20 Heritage Rd, Markham</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <span class="info-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          <div>
+            <strong>Hours</strong>
+            <span>Mon–Fri 8–6 · Sat 9–3</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <span class="info-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </span>
+          <div>
+            <strong>Planning</strong>
+            <span>Appointments recommended</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <span class="info-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          </span>
+          <div>
+            <strong>Payments</strong>
+            <span>Credit, debit, tap accepted</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="amenities" aria-labelledby="amenities-title">
+        <h2 id="amenities-title" class="amenities-title">Shop amenities</h2>
+        <div class="amenity-tags">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            Onsite services
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Mechanic on site
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Customer washroom
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+            NFC mobile payments
+          </span>
+        </div>
       </section>
 
       <section class="section services" id="services" aria-labelledby="services-title">
@@ -141,34 +213,52 @@
         </div>
         <div class="service-grid">
           <article class="service-card">
-            <span class="service-icon">01</span>
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </span>
             <h3>Diagnostics</h3>
             <p>Check-engine lights, warning messages, noises, leaks, and drivability concerns checked clearly.</p>
+            <span class="service-price">Call for pricing</span>
           </article>
           <article class="service-card">
-            <span class="service-icon">02</span>
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
             <h3>Brake Repair</h3>
             <p>Pads, rotors, brake changes, pedal feel, vibration, and safety-focused inspections.</p>
+            <span class="service-price">Call for pricing</span>
           </article>
           <article class="service-card">
-            <span class="service-icon">03</span>
-            <h3>Tires & Alignment</h3>
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+            </span>
+            <h3>Tires &amp; Alignment</h3>
             <p>Tire changes, pressure checks, road noise concerns, and alignment-related support.</p>
+            <span class="service-price">Call for pricing</span>
           </article>
           <article class="service-card">
-            <span class="service-icon">04</span>
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5S12.5 4 12 2c-.5 2-2 4-4 6.5S5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+            </span>
             <h3>Oil Changes</h3>
             <p>Routine oil service, filters, fluid checks, and maintenance reminders to keep the car healthy.</p>
+            <span class="service-price">Call for pricing</span>
           </article>
           <article class="service-card">
-            <span class="service-icon">05</span>
-            <h3>Electrical & Engine</h3>
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>
+            </span>
+            <h3>Electrical &amp; Engine</h3>
             <p>Battery, starter, charging, engine performance, old-car and newer-car troubleshooting.</p>
+            <span class="service-price">Call for pricing</span>
           </article>
           <article class="service-card">
-            <span class="service-icon">06</span>
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </span>
             <h3>Motor Parts</h3>
-            <p>Parts guidance and repair planning so you can fix what matters without unnecessary upselling.</p>
+            <p>OEM and aftermarket parts sourced and installed — with honest advice on what actually needs replacing.</p>
+            <span class="service-price">Call for pricing</span>
           </article>
         </div>
       </section>
@@ -178,6 +268,8 @@
           <img
             src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=1100&q=80"
             alt="Auto repair technician inspecting a vehicle"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div class="split-copy">
@@ -195,64 +287,135 @@
       </section>
 
       <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
-        <div class="section-heading">
-          <p>Public customer feedback</p>
-          <h2 id="reviews-title">Review themes people mention again and again.</h2>
+        <div class="section-heading reviews-heading">
+          <div>
+            <p>Customer reviews</p>
+            <h2 id="reviews-title">What Markham drivers are saying.</h2>
+          </div>
+          <a class="reviews-readall" href="https://www.google.com/maps/place/Motive+Care/" rel="noopener" target="_blank">Read all 98 reviews →</a>
         </div>
         <div class="review-shell">
-          <button class="review-control" type="button" data-review-prev aria-label="Previous review">‹</button>
+          <button class="review-control" type="button" data-review-prev aria-label="Previous review">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
           <div class="review-track" data-review-track tabindex="0" aria-label="Scrollable reviews">
             <article class="review-card">
               <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
               <p>“Excellent. He really knows his work and is extremely reliable and trustworthy.”</p>
-              <span>Public Google review</span>
+              <div class="review-author">
+                <span class="avatar" aria-hidden="true">S</span>
+                <div>
+                  <strong>Verified customer</strong>
+                  <span>Google review</span>
+                </div>
+              </div>
             </article>
             <article class="review-card">
               <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
               <p>“The kind of person you hope to find when your car needs repairs.”</p>
-              <span>Public Google review</span>
+              <div class="review-author">
+                <span class="avatar" aria-hidden="true">A</span>
+                <div>
+                  <strong>Verified customer</strong>
+                  <span>Google review</span>
+                </div>
+              </div>
             </article>
             <article class="review-card">
               <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
               <p>“Professional, reasonable, and willing to help.”</p>
-              <span>Public Google review</span>
+              <div class="review-author">
+                <span class="avatar" aria-hidden="true">R</span>
+                <div>
+                  <strong>Verified customer</strong>
+                  <span>Google review</span>
+                </div>
+              </div>
             </article>
             <article class="review-card">
               <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
               <p>“Always honest and reasonable. Service on time.”</p>
-              <span>Public Google review</span>
+              <div class="review-author">
+                <span class="avatar" aria-hidden="true">M</span>
+                <div>
+                  <strong>Verified customer</strong>
+                  <span>Google review</span>
+                </div>
+              </div>
             </article>
             <article class="review-card">
               <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
               <p>“Great mechanic who offers genuine advice and won’t try to upsell.”</p>
-              <span>Public Google review</span>
+              <div class="review-author">
+                <span class="avatar" aria-hidden="true">J</span>
+                <div>
+                  <strong>Verified customer</strong>
+                  <span>Google review</span>
+                </div>
+              </div>
             </article>
           </div>
-          <button class="review-control" type="button" data-review-next aria-label="Next review">›</button>
+          <button class="review-control" type="button" data-review-next aria-label="Next review">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
         </div>
       </section>
 
       <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
         <div class="section-heading">
-          <p>Shop-style photo gallery</p>
-          <h2 id="gallery-title">A clean visual feel for repairs, parts, and maintenance.</h2>
+          <p>Our shop</p>
+          <h2 id="gallery-title">A look inside the garage at 20 Heritage Rd.</h2>
         </div>
-        <div class="photo-grid">
-          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80" alt="Vehicle being serviced in a repair bay" />
-          <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=900&q=80" alt="Detailed car exterior in a professional garage" />
-          <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=900&q=80" alt="Car engine and workshop tools" />
-          <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=900&q=80" alt="Car service workspace with tools" />
+        <div class="photo-grid" data-lightbox-gallery>
+          <figure class="photo-item">
+            <img src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?auto=format&fit=crop&w=900&q=80" alt="Vehicle being serviced in a repair bay" loading="lazy" decoding="async" />
+            <figcaption>Our service bay at 20 Heritage Rd</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src="https://images.unsplash.com/photo-1632823471565-1ecdf5c6da77?auto=format&fit=crop&w=900&q=80" alt="Brake inspection in progress" loading="lazy" decoding="async" />
+            <figcaption>Brake inspection in progress</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=900&q=80" alt="Engine and workshop tools" loading="lazy" decoding="async" />
+            <figcaption>Engine work and diagnostics</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=900&q=80" alt="Car service workspace with tools" loading="lazy" decoding="async" />
+            <figcaption>Tools ready on the workbench</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src="https://images.unsplash.com/photo-1599256621730-535171e28e50?auto=format&fit=crop&w=900&q=80" alt="Tire mounting and balancing" loading="lazy" decoding="async" />
+            <figcaption>Tire mounting and balancing</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=900&q=80" alt="Oil change underway on a lift" loading="lazy" decoding="async" />
+            <figcaption>Oil change on the lift</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src="https://images.unsplash.com/photo-1605618313023-d6a08ac7d8f1?auto=format&fit=crop&w=900&q=80" alt="Mechanic checking under the hood" loading="lazy" decoding="async" />
+            <figcaption>Under-the-hood inspection</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80" alt="Customer vehicle ready for pickup" loading="lazy" decoding="async" />
+            <figcaption>Serviced and ready for pickup</figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="section location" id="location" aria-labelledby="location-title">
-        <div class="location-card">
-          <div>
-            <p>Visit Motive Care</p>
-            <h2 id="location-title">20 Heritage Rd, Markham, ON L3P 3P3</h2>
-            <p>
-              Appointments are recommended. Call ahead so the shop can plan the right time, parts, and inspection path for your vehicle.
-            </p>
+        <div class="section-heading">
+          <p>Visit &amp; contact</p>
+          <h2 id="location-title">Find us, check our hours, or send a message.</h2>
+        </div>
+
+        <div class="callout" role="note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <p><strong>Appointments are recommended.</strong> Call ahead so the shop can plan the right time, parts, and inspection path for your vehicle.</p>
+        </div>
+
+        <div class="location-grid">
+          <div class="location-info">
+            <h3>20 Heritage Rd, Markham, ON L3P 3P3</h3>
             <div class="contact-grid">
               <a href="tel:+19052010087">
                 <strong>Phone</strong>
@@ -263,41 +426,121 @@
                 <span>Open in Google Maps</span>
               </a>
               <div>
+                <strong>Hours</strong>
+                <span>Mon–Fri 8am–6pm · Sat 9am–3pm · Sun closed</span>
+              </div>
+              <div>
                 <strong>Payments</strong>
                 <span>Credit, debit, tap</span>
               </div>
-              <div>
-                <strong>Amenities</strong>
-                <span>Mechanic, washroom</span>
-              </div>
             </div>
+
+            <form class="contact-form" id="contact" data-contact-form>
+              <h3 class="contact-form-title">Send a message</h3>
+              <p class="contact-form-sub">Prefer not to call? Leave your details and we’ll get back to you.</p>
+              <div class="field-row">
+                <label class="field">
+                  <span>Name</span>
+                  <input type="text" name="name" autocomplete="name" required />
+                </label>
+                <label class="field">
+                  <span>Phone or email</span>
+                  <input type="text" name="contact" autocomplete="tel" required />
+                </label>
+              </div>
+              <label class="field">
+                <span>How can we help?</span>
+                <textarea name="message" rows="4" required></textarea>
+              </label>
+              <button class="button primary" type="submit">Send message</button>
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            </form>
           </div>
-          <iframe
-            title="Map to Motive Care in Markham"
-            src="https://www.google.com/maps?q=Motive%20Care%2020%20Heritage%20Rd%20Markham%20ON&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+
+          <div class="location-map">
+            <iframe
+              title="Map to Motive Care in Markham"
+              src="https://www.google.com/maps?q=Motive%20Care%2020%20Heritage%20Rd%20Markham%20ON&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </section>
 
       <section class="cta" aria-labelledby="cta-title">
-        <h2 id="cta-title">Need a mechanic in Markham?</h2>
-        <p>Call Motive Care before your next repair, maintenance visit, or parts question.</p>
-        <a class="button primary" href="tel:+19052010087">Call (905) 201-0087</a>
+        <h2 id="cta-title">Honest repairs. Fair prices. Call Motive Care today.</h2>
+        <p>Reach out before your next repair, maintenance visit, or parts question.</p>
+        <div class="cta-actions">
+          <a class="button primary" href="tel:+19052010087">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (905) 201-0087
+          </a>
+          <a class="button ghost" href="https://www.google.com/maps/dir/?api=1&destination=Motive+Care+20+Heritage+Rd+Markham+ON" rel="noopener">Get Directions</a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div>
-        <strong>Motive Care</strong>
-        <span>Auto repair shop in Markham, Ontario</span>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Motive Care home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </span>
+            <span class="brand-name">Motive<span>Care</span></span>
+          </a>
+          <p>Honest, reliable auto repair in Markham, Ontario.</p>
+          <div class="footer-social" aria-label="Social links">
+            <a href="https://www.google.com/maps/place/Motive+Care/" rel="noopener" target="_blank" aria-label="Google Business Profile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <strong>Explore</strong>
+          <a href="#services">Services</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#gallery">Photos</a>
+          <a href="#location">Location</a>
+        </div>
+
+        <div class="footer-col">
+          <strong>Contact</strong>
+          <a href="tel:+19052010087">(905) 201-0087</a>
+          <span>20 Heritage Rd</span>
+          <span>Markham, ON L3P 3P3</span>
+          <a class="footer-maps" href="https://www.google.com/maps/place/Motive+Care/" rel="noopener" target="_blank">Open in Google Maps →</a>
+        </div>
+
+        <div class="footer-col">
+          <strong>Hours</strong>
+          <span>Mon–Fri: 8am–6pm</span>
+          <span>Saturday: 9am–3pm</span>
+          <span>Sunday: Closed</span>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="tel:+19052010087">(905) 201-0087</a>
-        <a href="https://www.google.com/maps/place/Motive+Care/" rel="noopener">Google Maps</a>
+      <div class="footer-bottom">
+        <span>© 2026 Motive Care. All rights reserved.</span>
       </div>
     </footer>
+
+    <div class="lightbox" data-lightbox hidden aria-hidden="true">
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <figure class="lightbox-stage">
+        <img data-lightbox-img src="" alt="" />
+        <figcaption data-lightbox-caption></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="Next photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
 
     <script src="/script.js" defer></script>
   </body>
