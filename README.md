@@ -15,10 +15,19 @@ Static website for Motive Care, an auto repair and motor parts shop in Markham, 
 
 - `index.html` - page markup and local business schema
 - `styles.css` - responsive visual system
-- `script.js` - scrolling reviews carousel
+- `script.js` - small review-link focus enhancement
+- `tests/site-content.ps1` - static checks for the review link, expanded reviews, and imagery
 - `robots.txt` and `sitemap.xml` - search crawling hints
 - `vercel.json` and `_headers` - deploy headers
 
 ## Deploy
 
 This is a static site. Deploy the repository root on Vercel or Cloudflare Pages.
+
+## Verify
+
+Run the static content checks:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tests\site-content.ps1
+```
