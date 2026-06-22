@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bebas Neue", sans-serif;
+  --font-sans: "Work Sans", sans-serif;
+  --color-amber-accent: #e07b00;
+  --color-amber-accent-hover: #b86500;
+  --color-dark-charcoal: #1a1a1a;
+  --color-off-white: #f5f2ee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for the reviews horizontal track */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
