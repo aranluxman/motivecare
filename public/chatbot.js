@@ -1,5 +1,5 @@
 /*
- * Riley — Motive Care's chat assistant
+ * Motive Care Assistant — the shop's chat assistant
  * Self-contained, dependency-free chat widget.
  *
  * Drop-in usage on any site:
@@ -66,7 +66,7 @@
     {
       test: function (m) { return /\b(hi|hey|hello|yo|good (morning|afternoon|evening))\b/.test(m); },
       reply: function () {
-        return 'Hey there! 👋 I’m Riley from Motive Care. Ask me about our services, hours, pricing, or booking a visit.';
+        return 'Hey there! 👋 I’m the Motive Care Assistant. Ask me about our services, hours, pricing, or booking a visit.';
       }
     },
     // Thanks
@@ -259,7 +259,7 @@
   ];
 
   var OPENING =
-    'Hi! I’m Riley from Motive Care. Ask me about our services, hours, or booking a visit.';
+    'Hi! I’m the Motive Care Assistant. Ask me about our services, hours, or booking a visit.';
 
   // --- Styles (scoped inside the shadow root) -----------------------------
   var STYLES =
@@ -273,7 +273,7 @@
     '.mc-panel{position:fixed;bottom:92px;right:20px;width:370px;max-width:calc(100vw - 40px);height:560px;max-height:calc(100vh - 120px);background:#1a1a1a;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden;z-index:2147483000;opacity:0;transform:translateY(12px) scale(.98);pointer-events:none;transition:opacity .2s ease,transform .2s ease;border:1px solid #2a2a2a;}' +
     '.mc-panel.mc-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}' +
     '.mc-header{background:#111;padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #262626;}' +
-    '.mc-avatar{width:40px;height:40px;border-radius:50%;background:#e07b00;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex-shrink:0;}' +
+    '.mc-avatar{width:40px;height:40px;border-radius:50%;background:#e07b00;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;letter-spacing:.5px;flex-shrink:0;}' +
     '.mc-h-text{flex:1;min-width:0;}' +
     '.mc-h-name{color:#fff;font-weight:700;font-size:15px;line-height:1.2;}' +
     '.mc-h-sub{color:#9a9a9a;font-size:12px;display:flex;align-items:center;gap:5px;margin-top:2px;}' +
@@ -330,20 +330,20 @@
 
     var launcher = document.createElement('button');
     launcher.className = 'mc-launcher';
-    launcher.setAttribute('aria-label', 'Open chat with Riley from Motive Care');
+    launcher.setAttribute('aria-label', 'Open the Motive Care Assistant chat');
     launcher.innerHTML = chatIcon + '<span class="mc-badge"></span>';
     root.appendChild(launcher);
 
     var panel = document.createElement('div');
     panel.className = 'mc-panel';
     panel.setAttribute('role', 'dialog');
-    panel.setAttribute('aria-label', 'Chat with Riley from Motive Care');
+    panel.setAttribute('aria-label', 'Chat with the Motive Care Assistant');
     panel.innerHTML =
       '<div class="mc-header">' +
-        '<div class="mc-avatar">R</div>' +
+        '<div class="mc-avatar">MC</div>' +
         '<div class="mc-h-text">' +
-          '<div class="mc-h-name">Riley</div>' +
-          '<div class="mc-h-sub"><span class="mc-dot"></span>Motive Care’s assistant</div>' +
+          '<div class="mc-h-name">Motive Care Assistant</div>' +
+          '<div class="mc-h-sub"><span class="mc-dot"></span>Auto repair help · Markham, ON</div>' +
         '</div>' +
         '<button class="mc-close" aria-label="Close chat">' + closeIcon + '</button>' +
       '</div>' +
@@ -429,14 +429,14 @@
     function openPanel() {
       panel.classList.add('mc-open');
       launcher.innerHTML = closeIcon;
-      launcher.setAttribute('aria-label', 'Close chat with Riley');
+      launcher.setAttribute('aria-label', 'Close the Motive Care Assistant chat');
       startConversation();
       setTimeout(function () { input.focus(); }, 250);
     }
     function closePanel() {
       panel.classList.remove('mc-open');
       launcher.innerHTML = chatIcon + '<span class="mc-badge"></span>';
-      launcher.setAttribute('aria-label', 'Open chat with Riley from Motive Care');
+      launcher.setAttribute('aria-label', 'Open the Motive Care Assistant chat');
     }
     function toggle() {
       if (panel.classList.contains('mc-open')) closePanel(); else openPanel();
