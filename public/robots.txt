@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://motivecare.vercel.app/sitemap.xml
+Sitemap: https://motivecare.pages.dev/sitemap.xml
