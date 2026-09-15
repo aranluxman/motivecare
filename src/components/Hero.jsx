@@ -5,16 +5,18 @@ export default function Hero() {
     <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-[#111] overflow-hidden text-white" aria-labelledby="hero-title">
       {/* Background Image */}
       <img
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-40 mix-blend-luminosity"
-        src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1400&q=80"
-        alt="Automotive mechanic working on vehicle engine block inside shop"
-        width="1400"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-75 saturate-[0.85]"
+        src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1600&q=80"
+        alt="Mechanic leaning into an engine bay with a work light, repairing a car in the shop"
+        width="1600"
         height="900"
         loading="eager"
       />
       
       {/* Heavy industrial dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent z-10" />
+      {/* Keep the headline legible on the left while the mechanic stays visible on the right. */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/80 to-[#0d0d0d]/10 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-[#0d0d0d]/60 z-10" />
 
       {/* Hero Content */}
       <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-24 z-20 w-full flex flex-col justify-center">

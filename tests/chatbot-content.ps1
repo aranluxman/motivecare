@@ -22,9 +22,14 @@ function Assert-Contains {
 Assert-Contains $html 'src="/chatbot.js"' "index.html should load the chatbot widget."
 
 # Identity and opening message.
-Assert-Contains $widget 'Hi! I' "The widget should include Riley's opening message."
-Assert-Contains $widget "I’m Riley from Motive Care" "The opening message should introduce Riley."
-Assert-Contains $widget "Motive Care’s assistant" "The header should read Motive Care's assistant."
+Assert-Contains $widget 'Hi! I' "The widget should include the assistant's opening message."
+Assert-Contains $widget "I’m the Motive Care Assistant" "The opening message should introduce the Motive Care Assistant."
+Assert-Contains $widget 'Motive Care Assistant' "The chat header should read Motive Care Assistant."
+
+# The assistant is never named Riley.
+if ($widget -match 'Riley' -or $html -match 'Riley') {
+  throw "The assistant must be called Motive Care Assistant, never Riley."
+}
 
 # Contact details.
 Assert-Contains $widget '+19052010087' "The widget should use a tap-to-call phone link."

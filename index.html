@@ -14,18 +14,26 @@
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#1a1a1a" />
+
+    <!-- Icons / PWA manifest -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_CA" />
     <meta property="og:title" content="Motive Care | Auto Repair Shop in Markham, ON" />
+    <meta property="og:site_name" content="Motive Care" />
+    <meta property="og:image:alt" content="Mechanic repairing a car at Motive Care in Markham, Ontario" />
     <meta property="og:description" content="Reliable auto repair, diagnostics, brakes, tires, oil changes, and motor parts service in Markham." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1400" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1600&q=80" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Motive Care | Auto Repair Shop in Markham, ON" />
     <meta name="twitter:description" content="Reliable auto repair, diagnostics, brakes, tires, oil changes, and motor parts service in Markham." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1400" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1600&q=80" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,7 +46,7 @@
         "@context": "https://schema.org",
         "@type": "AutoRepair",
         "name": "Motive Care",
-        "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1400",
+        "image": "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1600&q=80",
         "telephone": "+1-905-201-0087",
         "priceRange": "$$",
         "address": {
@@ -66,9 +74,20 @@
         "makesOffer": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auto diagnostics" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brake repair" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Oil changes" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tire service" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Motor parts service" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tire service and balancing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wheel alignment" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Oil and fluid changes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Battery and charging system service" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Starter and alternator replacement" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Suspension and steering repair" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exhaust and muffler repair" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air conditioning and heating service" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Belt and hose replacement" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engine repair" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transmission service" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-purchase vehicle inspection" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seasonal tire changeover" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Motor parts sourcing" } }
         ]
       }
     </script>
@@ -76,7 +95,7 @@
   <body class="bg-[#f5f2ee] text-[#1a1a1a] font-sans antialiased selection:bg-[#e07b00] selection:text-white">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <!-- Riley: Motive Care chat assistant (self-contained widget) -->
+    <!-- Motive Care Assistant: self-contained chat widget -->
     <script defer src="/chatbot.js"></script>
   </body>
 </html>

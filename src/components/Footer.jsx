@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -8,14 +9,7 @@ export default function Footer() {
           
           {/* Shop branding info */}
           <div>
-            <div className="flex items-center gap-2.5 mb-2">
-              <div className="bg-amber-accent text-white font-display text-lg px-2.5 py-0.5 flex items-center justify-center tracking-wider skew-x-[-10deg]">
-                MC
-              </div>
-              <span className="font-display text-xl tracking-wider text-white uppercase">
-                Motive Care
-              </span>
-            </div>
+            <Logo size="sm" className="mb-3" />
             <p className="font-sans text-xs text-zinc-500 uppercase tracking-wider font-semibold">
               Auto Repair Shop · Markham, Ontario
             </p>

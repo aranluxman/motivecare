@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Logo from './Logo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -6,16 +7,15 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#1a1a1a]/95 backdrop-blur-md border-b border-zinc-800 text-white transition-all duration-300">
+    <header className="material-glass sticky top-0 z-50 bg-[#1a1a1a]/85 backdrop-blur-xl backdrop-saturate-150 border-b border-zinc-800 text-white transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Brand/Logo */}
-        <a href="#" className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-accent focus:ring-offset-2 focus:ring-offset-[#1a1a1a] rounded">
-          <div className="bg-amber-accent text-white font-display text-2xl px-3 py-1 flex items-center justify-center tracking-wider skew-x-[-10deg] group-hover:bg-amber-accent-hover transition-colors duration-200">
-            MC
-          </div>
-          <span className="font-display text-2xl tracking-wider text-white uppercase group-hover:text-amber-accent transition-colors duration-200">
-            Motive Care
-          </span>
+        <a
+          href="#"
+          aria-label="Motive Care home"
+          className="focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a] rounded"
+        >
+          <Logo />
         </a>
 
         {/* Desktop Nav Links */}
@@ -71,13 +71,8 @@ export default function Navbar() {
         <div>
           {/* Mobile Header */}
           <div className="flex items-center justify-between mb-12">
-            <a href="#" onClick={toggleMenu} className="flex items-center gap-3">
-              <div className="bg-amber-accent text-white font-display text-xl px-2.5 py-0.5 flex items-center justify-center tracking-wider skew-x-[-10deg]">
-                MC
-              </div>
-              <span className="font-display text-xl tracking-wider text-white uppercase">
-                Motive Care
-              </span>
+            <a href="#" onClick={toggleMenu} aria-label="Motive Care home">
+              <Logo size="sm" />
             </a>
             <button
               onClick={toggleMenu}
